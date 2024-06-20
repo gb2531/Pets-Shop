@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+      <div class="image">
+        <img src="" alt="pet-icon" />
+      </div>
+    </div>
+    <div class="col-sm">
+      <!-- desktop view -->
+      <div class="nav-items">
+        <ul class="nav">
+          <li>Home</li>
+          <li>About-Us</li>
+          <li>Contact-Us</li>
+          <li (click)="onClick()">Sign Up <b>|</b></li>
+          <li>Sign In</li>
+        </ul>
+      </div>
+      <!-- width reduces less than 540px, change to menu bar icon -->
+      <div class="icons">
+        <mat-toolbar>
+          <button
+            mat-icon-button
+            class="example-icon"
+            aria-label="Example icon-button with menu icon"
+          >
+            <fa-icon [icon]="menuBar"></fa-icon>
+          </button>
+        </mat-toolbar>
+      </div>
+    </div>
+  </div>
+</div>
