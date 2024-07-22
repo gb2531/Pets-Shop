@@ -1,12 +1,26 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row top-head">
     <div class="col-sm">
       <div class="image">
-        <img src="" alt="pet-icon" />
+        <img src="../../../assets/images/rock.png" class="logo" alt="Logo" />
+      </div>
+      <div class="mail">
+        <p>user name after login</p>
       </div>
     </div>
-    <div class="col-sm">
-      <!-- desktop view -->
+    <div class="col-sm" *ngIf="!isLogged">
+      <div class="search">
+        <input class="search-bar" type="search" placeholder="search.." />
+        <fa-icon class="search-icon" [icon]="searchicon"></fa-icon>
+      </div>
+      <div class="btn">
+        <button class="account">
+          <fa-icon [icon]="user"></fa-icon>Account
+        </button>
+        <button class="cart"><fa-icon [icon]="cart"></fa-icon>Cart</button>
+      </div>
+    </div>
+    <div class="col-sm" *ngIf="isLogged">
       <div class="nav-items">
         <ul class="nav">
           <li>Home</li>
@@ -16,8 +30,54 @@
           <li>Sign In</li>
         </ul>
       </div>
-      <!-- width reduces less than 540px, change to menu bar icon -->
-      <div class="icons">
+    </div>
+  </div>
+  <!-- <div class="third-container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="image">
+          <img src="../../../assets/images/rock.png" class="logo" alt="Logo" />
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="second-container">
+    <div class="border-line"></div>
+  </div> -->
+  <!-- <div class="fourth-container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="nav-items">
+          <ul class="nav">
+            <li>Home</li>
+            <li>About-Us</li>
+            <li>Contact-Us</li>
+            <li (click)="onClick()">Sign Up <b>|</b></li>
+            <li>Sign In</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="row">
+    <div class="col-sm">
+      <div class="image">
+        <img src="" alt="pet-icon" />
+      </div>
+    </div>
+    <div class="col-sm"> -->
+  <!-- desktop view -->
+  <!-- <div class="nav-items">
+        <ul class="nav">
+          <li>Home</li>
+          <li>About-Us</li>
+          <li>Contact-Us</li>
+          <li (click)="onClick()">Sign Up <b>|</b></li>
+          <li>Sign In</li>
+        </ul>
+      </div> -->
+  <!-- width reduces less than 540px, change to menu bar icon -->
+  <!-- <div class="icons">
         <mat-toolbar>
           <button
             mat-icon-button
@@ -29,5 +89,5 @@
         </mat-toolbar>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

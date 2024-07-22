@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faSearch,faCartShopping,faBars,faUser,faFileExport } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,12 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+  isLogged = true;
+  signin = faFileExport;
+  user = faUser
+  cart = faCartShopping
   menuBar = faBars;
+  searchicon = faSearch;
   constructor(private router: Router) {}
 
   onClick(){

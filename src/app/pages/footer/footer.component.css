@@ -1,0 +1,16 @@
+.container-fluid{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #2b2d42;
+    gap: 5rem;
+}
+.foot-panel-1{
+    display: inline-flex;
+    padding-top: 1rem;
+}
+
+.custom-spacing{
+    padding: 10px;
+    margin: 10px;
+}

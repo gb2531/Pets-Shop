@@ -1,19 +1,102 @@
 .container-fluid {
- background-color: antiquewhite;
+  background-color: #f2b211;
 }
+
+.top-head {
+  display: flex;
+  align-items: center;
+  background-color: #f4a261;
+  height: 5rem;
+}
+.mail {
+  display: inline-block;
+  padding-left: 10rem;
+}
+.search {
+  display: inline-block;
+  width: 15rem;
+  height: 2rem;
+  border: 1px solid;
+  border-radius: 0.45rem;
+  margin: 1rem;
+}
+.search-bar {
+  padding-top: 0.1rem;
+  margin-left: 0.5rem;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.search-bar:focus {
+  outline: none;
+  border: none;
+}
+
+.search-icon {
+  margin-top: 0.35rem;
+  margin-left: 1.65rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-left: 3rem;
+}
+
+.account {
+  height: 2rem;
+  width: 7rem;
+  border-radius: 0.35rem;
+  border: 0.05rem solid black;
+}
+.cart {
+  height: 2rem;
+  width: 7rem;
+  margin-left: 0.3rem;
+  border-radius: 0.35rem;
+  background-color: #fb5607;
+  border: none;
+}
+.second-container {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.border-line {
+  border: 0.5px solid black;
+  width: 80%;
+}
+
+.image {
+  display: inline-block;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .nav-items {
   padding: 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-right: 5rem;
 }
 
 ul {
   gap: 1rem;
 }
 li {
-  font-size: 1.15rem;
+  font-size: 1.10vw;
+}
+
+li:hover {
+  color: red;
   cursor: pointer;
 }
 .icons {
@@ -31,7 +114,7 @@ li {
     bottom: 1.25rem;
     right: 1rem;
   }
-  .image{
+  .image {
     float: inline-end;
   }
 }

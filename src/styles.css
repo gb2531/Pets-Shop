@@ -9,3 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
 }
+fa-icon{
+  font-size: 0.9rem;
+  margin: 0.35rem;
+}
