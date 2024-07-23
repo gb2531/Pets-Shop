@@ -7,6 +7,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from  '@angular/material/sidenav';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 //components
 import { AppComponent } from './app.component';
@@ -30,7 +32,9 @@ import { SignupComponent } from './pages/signup/signup.component';
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

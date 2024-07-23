@@ -1,1 +1,83 @@
-<p>signup works!</p>
+<div class="container-fluid">
+  <div class="first-container">
+    <div class="row">
+      <div class="col">
+        <div class="heading">
+          <div class="image">
+            <img
+              src="../../../assets/images/rock.png"
+              class="logo"
+              alt="Logo"
+            />
+          </div>
+          <h3 class="login">Login Form</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="second-container">
+    <div class="row">
+      <div class="col">
+        <form [formGroup]="SignInForm" (ngSubmit)="onSubmit()">
+            <label class="form-label" for="userfirstname">FirstName</label>
+            <input
+              type="text"
+              placeholder="firstName"
+              class="form-control"
+              id="userfirstname"
+              formControlName="firstName"
+            />
+          <div class="mb-3">
+            <label class="form-label" for="userlastname">LastName</label>
+            <input
+              type="text"
+              placeholder="lastName"
+              class="form-control"
+              id="userlastname"
+              formControlName="lastName"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="username">UserName</label>
+            <input
+              type="text"
+              placeholder="userName"
+              class="form-control"
+              id="userName"
+              formControlName="userName"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input
+              type="email"
+              placeholder="email"
+              class="form-control"
+              id="email"
+              formControlName="email"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input
+              type="password"
+              placeholder="password"
+              class="form-control"
+              id="password"
+              formControlName="password"
+            />
+          </div>
+          <div class="submit-btn">
+            <button class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- <div>
+        <div class="submit-btn">
+            <button (click)="onSubmit()" class="btn btn-primary">get Users</button>
+          </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
