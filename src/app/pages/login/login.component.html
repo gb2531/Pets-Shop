@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="heading">
+        <div class="image">
+          <img src="../../../assets/images/rock.png" class="logo" alt="Logo" />
+        </div>
+        <div class="log-head">
+          <h3 class="login">Login</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row form-container">
+    <div class="col">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <label for="username">User Name</label>
+        <input
+          id="username"
+          class="form-control"
+          type="text"
+          formControlName="username"
+        />
+        <label for="password">Password</label>
+        <input
+          id="password"
+          class="form-control"
+          type="password"
+          formControlName="password"
+        />
+        <div class="buttons">
+          <button class="btn btn-danger">Close</button>
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -18,9 +18,17 @@
   margin-right: auto;
   white-space: nowrap;
 }
-.submit-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3vh
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vh;
+}
+.close {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.close:hover {
+  cursor: pointer;
+  background-color: yellow;
 }

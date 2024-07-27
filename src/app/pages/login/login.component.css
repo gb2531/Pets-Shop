@@ -1,0 +1,31 @@
+.heading {
+   display: flex;
+   align-items: center;
+   gap: 9rem;
+   padding-top: 8px;
+  }
+  .logo {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    align-self: flex-start;
+  }
+  .log-head{
+    text-align: center;
+  }
+  .form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .btn{
+    width: 10rem;
+  }

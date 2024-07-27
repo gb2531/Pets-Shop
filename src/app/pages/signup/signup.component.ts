@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { faX } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
   SignInForm!: FormGroup;
+  close= faX
   constructor(
     private auth: AuthService,
     private route: Router,
