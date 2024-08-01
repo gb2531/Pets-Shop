@@ -17,7 +17,6 @@ export class AuthService {
   createUser(user: any): Observable<any> {
     let url = `${environment.serverBaseURL}/user`;
     const userdata = user;
-    let result: any;
     console.log(userdata);
     return this.http.post(url,user)
   }
@@ -26,5 +25,12 @@ export class AuthService {
     console.log('Inside the service');
     let url = `${environment.serverBaseURL}/user`;
     return this.http.get(url);
+  }
+
+  loginUser(logindata:any):Observable<any>{
+    let url = `${environment.serverBaseURL}/user/login`;
+    const userdata = logindata;
+    console.log(userdata)
+    return this.http.post(url,userdata)
   }
 }
