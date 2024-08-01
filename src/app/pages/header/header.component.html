@@ -8,7 +8,7 @@
         <p>user name after login</p>
       </div>
     </div>
-    <div class="col-sm" *ngIf="!isLogged">
+    <div class="col-sm" *ngIf="isLogged">
       <div class="search">
         <input class="search-bar" type="search" placeholder="search.." />
         <fa-icon class="search-icon" [icon]="searchicon"></fa-icon>
@@ -18,9 +18,10 @@
           <fa-icon [icon]="user"></fa-icon>Account
         </button>
         <button class="cart"><fa-icon [icon]="cart"></fa-icon>Cart</button>
+        <button class="cart" (click)="logout()">Logout</button>
       </div>
     </div>
-    <div class="col-sm" *ngIf="isLogged">
+    <div class="col-sm" *ngIf="!isLogged">
       <div class="nav-items">
         <ul class="nav">
           <li>Home</li>

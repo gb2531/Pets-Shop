@@ -25,7 +25,7 @@ export class LoginComponent {
 
   async onSubmit() {
     if (!this.loginForm.valid) {
-      this.dialogref.close();
+      this.dialogref.close(false);
     } else {
       console.log(this.loginForm.value['username']);
       let user = {
@@ -33,20 +33,21 @@ export class LoginComponent {
         password: this.loginForm.value['password'],
       };
       console.log(user);
-      await this.login.loginUser(user).subscribe((res) => {
-        console.log(res);
-        if (!res) {
-          console.log('error');
-        } else {
-          localStorage.setItem('usernam', res.userName)
-          localStorage.setItem('token', res.token)
-          console.log(res);
-          this.loginForm.reset();
-          this.dialogref.close();
+      await this.login.loginUser(user).subscribe(
+        (res) => {
+          if (res) {
+            this.loginForm.reset();
+            this.dialogref.close(true);
+          }
+        },
+        (error) => {
+          console.log(error, 'login failed');
+          this.dialogref.close(false);
         }
-      });
+      );
     }
   }
+
   closeDialog(): void {
     this.loginForm.reset();
     this.dialogref.close();
